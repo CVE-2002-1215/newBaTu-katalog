@@ -29,7 +29,7 @@ const Summary = () => {
           <div className="text-base font-medium text-gray-900">- Ürünleri, ürün kodu ve sipariş adedi ile birlikte aşağıda bulunan iletişim numarası üzerinden bize iletin. </div>
         </div>
         <div className="flex items-center justify-between pt-2 pb-2">
-          <div className="text-base font-medium text-gray-900">- Bizlere vermiş olduğunuz bilgiler kapsamında 'Size Özel Fiyat Listesi' en kısa sürede hazırlanacak, WhatsApp ve E-mail üzerinden sizlere iletilecektir.  </div>
+          <div className="text-base font-medium text-gray-900">- Bizlere vermiş olduğunuz bilgiler kapsamında &ldquo;Size Özel Fiyat Listesi&rdquo; en kısa sürede hazırlanacak, WhatsApp ve E-mail üzerinden sizlere iletilecektir.  </div>
         </div>
         <h2 className="text-base font-medium border-t border-gray-200 text-gray-900 pt-4" style={{ fontStyle: 'italic' }}>
             Siz müşterilerimize hizmet vermekten son derece mutluluk duyuyoruz. Bizi tercih ediyor olduğunuz için teşekkür ederiz.
