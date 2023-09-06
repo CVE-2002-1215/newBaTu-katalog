@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Custom CSS */
+.hide-on-small-screen {
+  display: none;
+}
+
+/* Tailwind CSS */
+@media (min-width: 1280px) {
+  .hide-on-small-screen {
+    display: block; /* Revert to default display on larger screens */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Mobil için medya sorgusu */
+@media (max-width: 767px) {
+  .desktop-button {
+    display: none;
+  }
+  .phone-button {
+    max-height: 80px;
+  }
+  .button {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
