@@ -13,11 +13,42 @@ interface ProductPageProps {
   },
 }
 
+export async function generateMetadata({
+  params,
+}:{
+  params:{
+    productId:string;
+  };
+}) {
+  try {
+    const product = await getProduct(params.productId);
+    if(!product){
+      return {
+        title : "Bulunamadı",
+        description: "Aramakta olduğunuz sayfaya ulaşılamıyor."
+      }
+    }
+    return {
+      title:product.name,
+      description:product.name,
+      alternates:{
+        canonical :`/${product.id}`
+      }
+    };
+  } catch(error){
+    console.log(error);
+    return {
+      title : "Bulunamadı",
+      description: "Aramakta olduğunuz sayfaya ulaşılamıyor."
+    }
+  }
+}
+
 const ProductPage: React.FC<ProductPageProps> = async ({ 
   params
  }) => {
     const product = await getProduct(params.productId);
-    console.log("a");
+    // console.log(product);
     const suggestedProducts = await getProducts({ 
         subCategoryId: product?.subCategory?.id,
     });
@@ -37,7 +68,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
               </div>
             </div>
             <hr className="my-10" />
-            <ProductList title="Related Items" items={suggestedProducts} />
+            <ProductList title="Önerilen Ürünler" items={suggestedProducts} />
           </div>
         </Container>
     </div>  

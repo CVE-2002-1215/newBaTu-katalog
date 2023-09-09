@@ -11,8 +11,12 @@ import './globals.css'
 const font = Urbanist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'New Ba&Tu Hırdavat',
-  description: 'New Ba&Tu Hırdavat',
+  metadataBase: new URL("https://batuhirdavat.com/"),
+  title: {
+    default: 'New Ba&Tu Hırdavat',
+    template: `%s | New Ba&Tu`
+  },
+  description: " En Uygun Fiyatlı Toptan Hırdavat | New Ba&Tu Hırdavat ",
 }
 
 export default function RootLayout({

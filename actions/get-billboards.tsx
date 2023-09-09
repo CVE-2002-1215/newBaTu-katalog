@@ -23,7 +23,7 @@ const getBillboards = async ( id?:string): Promise<Billboard[]> => {
     url: image.url
   }));
 
-  // console.log(imageUrls);
+  console.log(imageUrls);
 
 return imageUrls;
 };

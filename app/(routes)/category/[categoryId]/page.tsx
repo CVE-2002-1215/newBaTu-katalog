@@ -12,6 +12,7 @@ import Container from "@/components/ui/container";
 import Filter from "./components/filter";
 import MobileFilters from "./components/mobile-filters";
 import FilterClearButton from "@/components/ui/filter-clear-button";
+import getCategoryName from "@/actions/get-category-name";
 
 export const revalidate = 0;
 
@@ -22,6 +23,39 @@ interface CategoryPageProps {
     searchParams: {
       subCategoryId: string;
       brandId: string;
+    }
+  }
+
+  export async function generateMetadata({
+    params,
+  }:{
+    params:{
+        categoryId:string;
+    };
+  }) {
+    try {
+      
+      const categoryName = await getCategoryName(params.categoryId);
+        
+      if(!categoryName){
+        return {
+          title : "Bulunamadı",
+          description: "Aramakta olduğunuz sayfaya ulaşılamıyor."
+        }
+      }
+      return {
+        title:categoryName,
+        description:categoryName,
+        alternates:{
+            canonical :`/${params.categoryId}`
+          }
+      };
+    } catch(error){
+      console.log(error);
+      return {
+        title : "Bulunamadı",
+        description: "Aramakta olduğunuz sayfaya ulaşılamıyor."
+      }
     }
   }
 
