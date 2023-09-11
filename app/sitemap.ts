@@ -1,6 +1,8 @@
 import getAllProducts from "@/actions/get-all-products";
 import getCategories from "@/actions/get-categories";
 
+export const revalidate = 0;
+
 export default async function sitemap() {
   const baseUrl = "https://www.batuhirdavat.com";
 
