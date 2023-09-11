@@ -10,6 +10,8 @@ import './globals.css'
 
 const font = Urbanist({ subsets: ['latin'] })
 
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://batuhirdavat.com/"),
   title: {
