@@ -5,6 +5,8 @@ import ProductList from '@/components/product-list';
 import Container from '@/components/ui/container';
 import React from 'react';
 
+export const revalidate = 0;
+
 const HomePage: React.FC = async () => {
     const products = await getProducts({isFeatured : true});
     const slides = await getBillboards("e0ec14b4-81fa-4696-8822-eda5cfcc9798"); // Anasayfa billboard
