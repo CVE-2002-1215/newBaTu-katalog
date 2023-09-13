@@ -15,10 +15,10 @@ export const revalidate = 0;
 export const metadata: Metadata = {
   metadataBase: new URL("https://batuhirdavat.com/"),
   title: {
-    default: 'New Ba&Tu Hırdavat',
+    default: "Ankara Toptan Hırdavat, Türkiye'nin Tek Adresi | New Ba&Tu Hırdavat",
     template: `%s | New Ba&Tu`
   },
-  description: " En Uygun Fiyatlı Toptan Hırdavat | New Ba&Tu Hırdavat ",
+  description: " Tüm Türkiye'ye hizmet veriyoruz. Dilediğiniz ürünleri seçin ve bizi arayın. Sizin için hazırlayacağımız fiyat listesini size gönderelim. En ucuza En Kaliteli Toptan Hırdavat | New Ba&Tu Hırdavat ",
 }
 
 export default function RootLayout({
