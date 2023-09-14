@@ -49,6 +49,7 @@ const ProductPage: React.FC<ProductPageProps> = async ({
  }) => {
     const product = await getProduct(params.productId);
     // console.log(product);
+    // console.log(product?.images[0].url);
     const suggestedProducts = await getProducts({ 
         subCategoryId: product?.subCategory?.id,
     });
