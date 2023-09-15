@@ -52,6 +52,8 @@ interface CategoryPageProps {
         openGraph: {
           title: categoryName,
           description: categoryName,
+          url:`https://wwww.batuhirdavat.com/category/${params.categoryId}`,
+          type: 'website',
         }
       };
     } catch(error){

@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ankara Toptan Hırdavat, Türkiye'nin Tek Adresi | New Ba&Tu Hırdavat",
     description: " Tüm Türkiye'ye hizmet veriyoruz. Dilediğiniz ürünleri seçin ve bizi arayın. Sizin için hazırlayacağımız fiyat listesini size gönderelim. En ucuza En Kaliteli Toptan Hırdavat | New Ba&Tu Hırdavat ",
+    url:'https://wwww.batuhirdavat.com',
+    type: 'website',
   }
 }
 

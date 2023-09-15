@@ -37,6 +37,8 @@ export async function generateMetadata({
       openGraph: {
         title: product.name,
         description: product.name,
+        url:`https://wwww.batuhirdavat.com/product/${params.productId}`,
+        type: 'website',
       }
     };
   } catch(error){
