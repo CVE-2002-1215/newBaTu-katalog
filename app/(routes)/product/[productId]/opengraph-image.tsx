@@ -5,6 +5,10 @@ import probe from "probe-image-size";
 
 export const alt = "New Ba&Tu Hırdavat";
 export const contentType = "image/png";
+export const size = {
+  width: 250,
+  height: 250,
+} 
 
 export const revalidate = 0;
 
@@ -25,17 +29,16 @@ export default async function og({ params }: { params: { productId: string } }) 
         style={{
           fontSize: 48,
           background: `url(${product.images[0].url})`,
-          backgroundSize:'cover',
+          backgroundSize: 'cover',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           backgroundRepeat: 'no-repeat',
-          position:'relative'
+          position: 'relative',
         }}
-      >
-      </div>
+      ></div>
     ),
     {
       ...size
