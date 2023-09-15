@@ -54,6 +54,7 @@ interface CategoryPageProps {
           description: categoryName,
           url:`https://www.batuhirdavat.com/category/${params.categoryId}`,
           type: 'website',
+          siteName:'batuhirdavat.com'
         }
       };
     } catch(error){

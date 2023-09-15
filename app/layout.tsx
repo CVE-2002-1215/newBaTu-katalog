@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     description: " Tüm Türkiye'ye hizmet veriyoruz. Dilediğiniz ürünleri seçin ve bizi arayın. Sizin için hazırlayacağımız fiyat listesini size gönderelim. En ucuza En Kaliteli Toptan Hırdavat | New Ba&Tu Hırdavat ",
     url:'https://www.batuhirdavat.com',
     type: 'website',
+    siteName:'batuhirdavat.com'
   }
 }
 
