@@ -7,8 +7,8 @@ import { ImageResponse } from "next/server";
 export const alt = "New Ba&Tu Hırdavat";
 export const contentType = "image/png";
 export const size = {
-  width: 250,
-  height: 250,
+  width: 1200,
+  height: 630,
 }
 
 export const revalidate = 0;
