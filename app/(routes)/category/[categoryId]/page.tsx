@@ -36,6 +36,8 @@ interface CategoryPageProps {
     try {
       
       const categoryName = await getCategoryName(params.categoryId);
+      const category_billboard_Id = await getCategoryBillboardId(params.categoryId);
+      const slides = await getBillboards(`${category_billboard_Id}`);
         
       if(!categoryName){
         return {
@@ -54,7 +56,8 @@ interface CategoryPageProps {
           description: categoryName,
           url:`https://www.batuhirdavat.com/category/${params.categoryId}`,
           type: 'website',
-          siteName:'batuhirdavat.com'
+          siteName:'batuhirdavat.com',
+          images: slides?.[0].url,
         }
       };
     } catch(error){
