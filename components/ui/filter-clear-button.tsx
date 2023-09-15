@@ -19,12 +19,12 @@ function FilterClearButton() {
       setLoading(true);
       setTimeout(()=>{
         setLoading(false);
-      },1800)
+      },1200)
     }else{
       setLoading(false);
       setTimeout(()=>{
         setLoading(true);
-      },1800)
+      },1200)
     }
   };
 
