@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       },
       {
         rel: 'icon',
-        url: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/favicon-32x32_uztfjb.png',
+        url: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/favicon-16x16_jrm4ot.png',
         sizes:"16x16",
         type:"image/png"
       },
