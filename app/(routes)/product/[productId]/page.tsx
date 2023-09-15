@@ -36,7 +36,7 @@ export async function generateMetadata({
       },
       openGraph: {
         title: product.name,
-        description: product.name,
+        description: "Ankara Toptan Hırdavat, Türkiye'nin Tek Adresi | New Ba&Tu Hırdavat",
         url:`https://www.batuhirdavat.com/product/${params.productId}`,
         type: 'website',
         siteName:'batuhirdavat.com',

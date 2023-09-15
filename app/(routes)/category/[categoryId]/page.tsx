@@ -52,8 +52,8 @@ interface CategoryPageProps {
             canonical :`/${params.categoryId}`
         },
         openGraph: {
-          title: categoryName,
-          description: categoryName,
+          title: `${categoryName} | New Ba&Tu Hırdavat`,
+          description: "Ankara Toptan Hırdavat, Türkiye'nin Tek Adresi | New Ba&Tu Hırdavat",
           url:`https://www.batuhirdavat.com/category/${params.categoryId}`,
           type: 'website',
           siteName:'batuhirdavat.com',
