@@ -39,7 +39,8 @@ export async function generateMetadata({
         description: product.name,
         url:`https://www.batuhirdavat.com/product/${params.productId}`,
         type: 'website',
-        siteName:'batuhirdavat.com'
+        siteName:'batuhirdavat.com',
+        images: product.images[0].url,
       }
     };
   } catch(error){
