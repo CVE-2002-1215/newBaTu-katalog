@@ -25,7 +25,37 @@ export const metadata: Metadata = {
     url:'https://www.batuhirdavat.com',
     type: 'website',
     siteName:'batuhirdavat.com'
-  }
+  },
+  icons: {
+    icon: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798546/favicon_hiha2r.ico',
+    shortcut: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/favicon-32x32_uztfjb.png',
+    other: [
+      {
+        rel: 'apple-touch-icon-precomposed',
+        url: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/apple-touch-icon_br5nmq.png',
+        sizes:"180x180",
+        type:"image/png"
+      },
+      {
+        rel: 'apple-touch-icon',
+        url: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/apple-touch-icon_br5nmq.png',
+        sizes:"180x180",
+        type:"image/png"
+      },
+      {
+        rel: 'icon',
+        url: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/favicon-32x32_uztfjb.png',
+        sizes:"32x32",
+        type:"image/png"
+      },
+      {
+        rel: 'icon',
+        url: 'https://res.cloudinary.com/dzqid5nmc/image/upload/v1694798545/favicon-32x32_uztfjb.png',
+        sizes:"16x16",
+        type:"image/png"
+      },
+    ]
+  },
 }
 
 export default function RootLayout({
