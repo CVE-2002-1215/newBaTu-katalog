@@ -33,6 +33,10 @@ export async function generateMetadata({
       description:product.name,
       alternates:{
         canonical :`/${product.id}`
+      },
+      openGraph: {
+        title: product.name,
+        description: product.name,
       }
     };
   } catch(error){

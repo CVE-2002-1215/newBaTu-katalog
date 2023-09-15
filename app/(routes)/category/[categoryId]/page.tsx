@@ -48,7 +48,11 @@ interface CategoryPageProps {
         description:categoryName,
         alternates:{
             canonical :`/${params.categoryId}`
-          }
+        },
+        openGraph: {
+          title: categoryName,
+          description: categoryName,
+        }
       };
     } catch(error){
       console.log(error);
