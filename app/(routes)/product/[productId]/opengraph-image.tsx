@@ -6,8 +6,8 @@ import probe from "probe-image-size";
 export const alt = "New Ba&Tu Hırdavat";
 export const contentType = "image/png";
 export const size = {
-  width: 250,
-  height: 250,
+  width: 400,
+  height: 400,
 } 
 
 export const revalidate = 0;
