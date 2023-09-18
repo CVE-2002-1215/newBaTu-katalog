@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { Expand, ShoppingCart } from "lucide-react";
+import { Expand, Info, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { MouseEventHandler } from "react";
 
@@ -24,7 +24,8 @@ const ProductCard: React.FC<ProductCard> = ({
     const router = useRouter();
 
     const handleClick = () => {
-      router.push(`/product/${data?.id}`);
+    //   router.push(`/product/${data?.id}`);
+        previewModal.onOpen(data);
     };
 
     const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
@@ -40,44 +41,81 @@ const ProductCard: React.FC<ProductCard> = ({
     };    
 
     return ( 
-        <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4" >
-            {/* Image & actions */}
-            <div className="aspect-square rounded-xl bg-gray-100 relative">
-                <Image 
-                    src={data.images?.[0]?.url} 
-                    alt="" 
-                    fill
-                    className="aspect-square object-cover rounded-md"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                />
-                <>
-                <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
-                    <div className="flex gap-x-6 justify-center">
-                        <IconButton 
-                            onClick={onPreview}
-                            icon={<Expand size={20} className="text-gray-600" />} 
-                        />
-                        <IconButton 
-                            onClick={onAddToCart}
-                            icon={<ShoppingCart size={20} className="text-gray-600" />} 
-                        />
+    <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4 flex items-center">
+        <div className="flex items-center w-full">
+            {/* Image */}
+            <div className="w-1/4 pr-4 align-middle ">
+                <div className="aspect-square rounded-xl bg-gray-100 relative ">
+                    <Image
+                        src={data.images?.[0]?.url}
+                        alt=""
+                        fill
+                        className="aspect-square object-cover rounded-md"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                    <div className="opacity-0 group-hover:opacity-100 transition absolute top-0 right-0 p-2">
+                        <div className="flex gap-x-6 justify-center">
+                            <IconButton
+                                onClick={onPreview}
+                                icon={<Info size={15} className="text-gray-600" />}
+                            />
+                        </div>
                     </div>
                 </div>
-                </>
             </div>
-            {/* Decription */}
-            <div>
+            {/* Description */}
+            <div className="w-3/4">
                 <p className="font-semibold text-lg">{data.name}</p>
                 <p className="text-sm text-gray-500">{data.category?.name}</p>
-            </div>
-            {/* Price & Reiew */}
-            <div className="flex items-center justify-between">
-                <div className="font-semibold">
-                    Minimum Sipariş Adedi: {data.minqty}
+                {/* Price & Review */}
+                <div className="flex items-center justify-between">
+                    <div className="font-semibold">
+                        Minimum Sipariş Adedi: {data.minqty}
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+        // <div onClick={handleClick} className="bg-white group cursor-pointer rounded-xl border p-3 space-y-4" >
+        //     {/* Image & actions */}
+        //     <div className="aspect-square rounded-xl bg-gray-100 relative">
+        //         <Image 
+        //             src={data.images?.[0]?.url} 
+        //             alt="" 
+        //             fill
+        //             className="aspect-square object-cover rounded-md"
+        //             sizes="(max-width: 640px) 100vw, 50vw"
+        //         />
+        //         <>
+        //         <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+        //             <div className="flex gap-x-6 justify-center">
+        //                 <IconButton 
+        //                     onClick={onPreview}
+        //                     icon={<Expand size={20} className="text-gray-600" />} 
+        //                 />
+        //                 <IconButton 
+        //                     onClick={onAddToCart}
+        //                     icon={<ShoppingCart size={20} className="text-gray-600" />} 
+        //                 />
+        //             </div>
+        //         </div>
+        //         </>
+        //     </div>
+        //     {/* Decription */}
+        //     <div>
+        //         <p className="font-semibold text-lg">{data.name}</p>
+        //         <p className="text-sm text-gray-500">{data.category?.name}</p>
+        //     </div>
+        //     {/* Price & Reiew */}
+        //     <div className="flex items-center justify-between">
+        //         <div className="font-semibold">
+        //             Minimum Sipariş Adedi: {data.minqty}
+        //         </div>
+        //     </div>
+        // </div>
      );
 }
  
 export default ProductCard;
+
+// Deneme
