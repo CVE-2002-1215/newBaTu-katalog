@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import getBillboards from "@/actions/get-billboards";
 import probe from "probe-image-size";
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 
 export const alt = "New Ba&Tu Hırdavat";
 export const contentType = "image/png";
@@ -42,5 +42,5 @@ export default async function og() {
     {
       ...size
     }
-  )
+  );
 }
