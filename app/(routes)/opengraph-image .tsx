@@ -14,7 +14,7 @@ export const revalidate = 0;
 
 export default async function og() {
   
-  const billboards = await getBillboards("e0ec14b4-81fa-4696-8822-eda5cfcc9798");
+  const billboards = await getBillboards("c9510183-16c9-443f-95f7-b19f3be8c119");
   
   // Get the image dimensions using probe-image-size
   const { width, height } = await probe(billboards?.[0].url);
