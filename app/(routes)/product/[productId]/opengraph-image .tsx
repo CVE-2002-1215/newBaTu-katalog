@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import getProduct from "@/actions/get-product";
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 import probe from "probe-image-size";
 
 export const alt = "New Ba&Tu Hırdavat";

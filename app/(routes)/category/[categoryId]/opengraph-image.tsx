@@ -2,7 +2,7 @@
 import getBillboards from "@/actions/get-billboards";
 import getCategoryById from "@/actions/get-category-by-id";
 import probe from "probe-image-size";
-import { ImageResponse } from "next/server";
+import { ImageResponse } from "next/og";
 
 export const alt = "New Ba&Tu Hırdavat";
 export const contentType = "image/png";
