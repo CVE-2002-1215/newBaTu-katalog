@@ -14,13 +14,11 @@ const getBillboards = async ( id?:string): Promise<Billboard[]> => {
 
   const res = await fetch(url);
   const raw = await res.text();
-  // console.log(raw);
 
   const responseArray = JSON.parse(raw);
-  // console.log(responseArray);
 
   const imageUrls = responseArray.images.map((image: {url:string})=> ({
-    url: image.url
+   url: image.url
   }));
 
   // console.log(imageUrls);

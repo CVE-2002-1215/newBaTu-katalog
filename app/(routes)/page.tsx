@@ -10,7 +10,7 @@ export const revalidate = 0;
 export async function generateMetadata({
   }) {
     try {
-        const slides = await getBillboards("e0ec14b4-81fa-4696-8822-eda5cfcc9798"); // Anasayfa billboard
+        const slides = await getBillboards("c9510183-16c9-443f-95f7-b19f3be8c119"); // Anasayfa billboard
 
       if(!slides){
         return {
@@ -39,7 +39,7 @@ export async function generateMetadata({
 
 const HomePage: React.FC = async () => {
     const products = await getProducts({isFeatured : true});
-    const slides = await getBillboards("e0ec14b4-81fa-4696-8822-eda5cfcc9798"); // Anasayfa billboard
+    const slides = await getBillboards("c9510183-16c9-443f-95f7-b19f3be8c119"); // Anasayfa billboard
     return (
         <Container >
             <div className='space-y-2 pb-10'>
